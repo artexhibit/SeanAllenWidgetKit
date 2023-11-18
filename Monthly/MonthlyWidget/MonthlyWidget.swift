@@ -1,10 +1,3 @@
-//
-//  MonthlyWidget.swift
-//  MonthlyWidget
-//
-//  Created by Igor Volkov on 18.11.2023.
-//
-
 import WidgetKit
 import SwiftUI
 
@@ -23,6 +16,7 @@ struct Provider: TimelineProvider {
 
         // Generate a timeline consisting of seven entries a day apart, starting from the current date.
         let currentDate = Date()
+        
         for dayOffset in 0 ..< 7 {
             let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
             let startOfDate = Calendar.current.startOfDay(for: entryDate)
@@ -41,28 +35,34 @@ struct DayEntry: TimelineEntry {
 
 struct MonthlyWidgetEntryView : View {
     var entry: DayEntry
+    var config: MonthConfig
+    
+    init(entry: DayEntry) {
+        self.entry = entry
+        self.config = MonthConfig.determineConfig(from: entry.date)
+    }
 
     var body: some View {
         ZStack {
             ContainerRelativeShape()
-                .fill(.gray.gradient)
+                .fill(config.backgroundColor.gradient)
                 .frame(maxWidth:.infinity , maxHeight: .infinity )
             
             VStack {
                 HStack(spacing: 4) {
-                    Text("⛄️")
-                        .font(.title)
+                    Text(config.emojiText)
+                        .font(.title2)
                     Text(entry.date.weekdayDisplayFormat)
                         .font(.title3)
                         .fontWeight(.bold)
                         .minimumScaleFactor(0.6)
-                        .foregroundStyle(.black.opacity(0.6))
+                        .foregroundStyle(config.weekDayTextColor)
                     Spacer()
                 }
                 
                 Text(entry.date.dayDisplayFormat)
                     .font(.system(size: 80, weight: .heavy))
-                    .foregroundStyle(.white.opacity(0.8))
+                    .foregroundStyle(config.dayTextColor)
             }
             .padding()
         }
@@ -94,7 +94,17 @@ struct MonthlyWidget: Widget {
 #Preview(as: .systemSmall) {
     MonthlyWidget()
 } timeline: {
-    DayEntry(date: .now)
+    DayEntry(date: dateToDisplay(month: 5, day: 10))
+}
+
+//helper fmethod to test different dates
+func dateToDisplay(month: Int, day: Int) -> Date {
+    let components = DateComponents(calendar: Calendar.current,
+                                    year: 2023,
+                                    month: month,
+                                    day: day)
+    
+    return Calendar.current.date(from: components)!
 }
 
 extension Date {

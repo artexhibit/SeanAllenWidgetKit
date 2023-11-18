@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Monthly
-//
-//  Created by Igor Volkov on 18.11.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {

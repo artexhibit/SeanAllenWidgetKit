@@ -3,25 +3,38 @@ import SwiftUI
 
 struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> RepoEntry {
-        RepoEntry(date: Date(), repo: Repository.placeholder)
+        RepoEntry(date: Date(), repo: Repository.placeholder, avatarImageData: Data())
     }
-
+    
     func getSnapshot(in context: Context, completion: @escaping (RepoEntry) -> ()) {
-        let entry = RepoEntry(date: Date(), repo: Repository.placeholder)
+        let entry = RepoEntry(date: Date(), repo: Repository.placeholder, avatarImageData: Data())
         completion(entry)
     }
-
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [RepoEntry] = []
+        //using Task coz we have an async/await networking and should be in async context
+        Task {
+            let nexUpdate = Date().addingTimeInterval(43200) // 12 hours in seconds
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+            do {
+                let repo = try await NetworkManager.shared.getRepo(atURL: RepoURL.kursvalut)
+                let avatarImageData = await NetworkManager.shared.downloadImageData(from: repo.owner.avatarUrl)
+                let entry = RepoEntry(date: .now, repo: repo, avatarImageData: avatarImageData ?? Data())
+                
+                //request widget update each 12 hours from now
+                let timeline = Timeline(entries: [entry], policy: .after(nexUpdate))
+                completion(timeline)
+            } catch {
+                print("❌ Error - \(error)")
+            }
+        }
     }
 }
 
 struct RepoEntry: TimelineEntry {
     let date: Date
     let repo: Repository
+    let avatarImageData: Data
 }
 
 struct RepoWatcherWidgetEntryView : View {
@@ -30,13 +43,15 @@ struct RepoWatcherWidgetEntryView : View {
     var daysSinceLastActivity: Int {
         calculateDaysSinceLastActivity(from: entry.repo.pushedAt)
     }
-
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Circle()
+                    Image(uiImage: UIImage(data: entry.avatarImageData) ?? UIImage(named: "avatar")!)
+                        .resizable()
                         .frame(width: 50, height: 50)
+                        .clipShape(Circle())
                     
                     Text(entry.repo.name)
                         .font(.title2)
@@ -81,7 +96,7 @@ struct RepoWatcherWidgetEntryView : View {
 
 struct RepoWatcherWidget: Widget {
     let kind: String = "RepoWatcherWidget"
-
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
@@ -102,7 +117,7 @@ struct RepoWatcherWidget: Widget {
 #Preview(as: .systemMedium) {
     RepoWatcherWidget()
 } timeline: {
-    RepoEntry(date: .now, repo: Repository.placeholder)
+    RepoEntry(date: .now, repo: Repository.placeholder, avatarImageData: Data())
 }
 
 fileprivate struct StatLabel: View {

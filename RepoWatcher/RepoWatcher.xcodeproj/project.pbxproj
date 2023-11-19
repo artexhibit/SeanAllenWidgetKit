@@ -21,6 +21,8 @@
 		0B888DCD2B0A3C8B00672CC2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DCA2B0A39CB00672CC2 /* Repository.swift */; };
 		0B888DCF2B0A42BB00672CC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DCE2B0A42BB00672CC2 /* NetworkManager.swift */; };
 		0B888DD02B0A42BB00672CC2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DCE2B0A42BB00672CC2 /* NetworkManager.swift */; };
+		0B888DD52B0A5E9B00672CC2 /* RepoMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */; };
+		0B888DD92B0A6DB200672CC2 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DD82B0A6DB200672CC2 /* MockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		0B888DC22B0A348D00672CC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B888DCA2B0A39CB00672CC2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		0B888DCE2B0A42BB00672CC2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoMediumView.swift; sourceTree = "<group>"; };
+		0B888DD82B0A6DB200672CC2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +142,10 @@
 			children = (
 				0B888DBC2B0A348C00672CC2 /* RepoWatcherWidgetBundle.swift */,
 				0B888DBE2B0A348C00672CC2 /* RepoWatcherWidget.swift */,
+				0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */,
 				0B888DC02B0A348D00672CC2 /* Assets.xcassets */,
 				0B888DC22B0A348D00672CC2 /* Info.plist */,
+				0B888DD82B0A6DB200672CC2 /* MockData.swift */,
 			);
 			path = RepoWatcherWidget;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B888DD02B0A42BB00672CC2 /* NetworkManager.swift in Sources */,
+				0B888DD92B0A6DB200672CC2 /* MockData.swift in Sources */,
+				0B888DD52B0A5E9B00672CC2 /* RepoMediumView.swift in Sources */,
 				0B888DBF2B0A348C00672CC2 /* RepoWatcherWidget.swift in Sources */,
 				0B888DBD2B0A348C00672CC2 /* RepoWatcherWidgetBundle.swift in Sources */,
 				0B888DCD2B0A3C8B00672CC2 /* Repository.swift in Sources */,

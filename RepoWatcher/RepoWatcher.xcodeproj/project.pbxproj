@@ -95,6 +95,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B20DB8A2B0BE833007D3DD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */,
+				0B20DB852B0BCD1E007D3DD8 /* ContributorMediumView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B20DB8B2B0BE845007D3DD8 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				0B888DBE2B0A348C00672CC2 /* CompactRepoWidget.swift */,
+				0B20DB832B0BC35B007D3DD8 /* ContributorWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
 		0B888D972B0A345C00672CC2 = {
 			isa = PBXGroup;
 			children = (
@@ -149,11 +167,9 @@
 			isa = PBXGroup;
 			children = (
 				0B20DB812B0BC0A6007D3DD8 /* WidgetBundle.swift */,
-				0B888DBE2B0A348C00672CC2 /* CompactRepoWidget.swift */,
-				0B20DB832B0BC35B007D3DD8 /* ContributorWidget.swift */,
-				0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */,
-				0B20DB852B0BCD1E007D3DD8 /* ContributorMediumView.swift */,
 				0B888DD82B0A6DB200672CC2 /* MockData.swift */,
+				0B20DB8B2B0BE845007D3DD8 /* Widgets */,
+				0B20DB8A2B0BE833007D3DD8 /* Views */,
 				0B888DC02B0A348D00672CC2 /* Assets.xcassets */,
 				0B888DC22B0A348D00672CC2 /* Info.plist */,
 			);

@@ -12,7 +12,7 @@ struct CompactRepoProvider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        //using Task coz we have an async/await networking and should be in async context
+        //using Task coz we have an async/await network call and should be in async context
         Task {
             let nexUpdate = Date().addingTimeInterval(43200) // 12 hours in seconds
 
@@ -93,8 +93,9 @@ struct CompactRepoWidget: Widget {
     }
 }
 
-#Preview(as: .systemLarge) {
+#Preview(as: .systemMedium) {
     CompactRepoWidget()
 } timeline: {
-    CompactRepoEntry(date: .now, repo: MockData.repoOne, bottomRepo: MockData.repoTwo)
+    CompactRepoEntry(date: .now, repo: MockData.repoOne, bottomRepo: nil)
+    CompactRepoEntry(date: .now, repo: MockData.repoOneV2, bottomRepo: nil)
 }

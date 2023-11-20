@@ -8,7 +8,12 @@ struct MockData {
                                     watchers: 123,
                                     openIssues: 55,
                                     pushedAt: "2023-11-18T10:38:49Z",
-                                    avatarData: Data())
+                                    avatarData: Data(),
+                                    contributors: [Contributor(login: "Sean Allen", avatarUrl: "", contributions: 42, avatarData: Data()),
+                                                   Contributor(login: "Igor Volkov", avatarUrl: "", contributions: 402, avatarData: Data()),
+                                                   Contributor(login: "Bill Gates", avatarUrl: "", contributions: 2, avatarData: Data()),
+                                                   Contributor(login: "Harvey Spector", avatarUrl: "", contributions: 24, avatarData: Data())
+                                                  ])
     static let repoTwo = Repository(name: "Repository 2",
                                     owner: Owner(avatarUrl: ""),
                                     hasIssues: false,

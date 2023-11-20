@@ -12,10 +12,38 @@ struct ContributorProvider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<ContributorEntry>) -> Void) {
-        let nexUpdate = Date().addingTimeInterval(43200)
-        let entry  = ContributorEntry(date: .now, repo: MockData.repoOne)
-        let timeline = Timeline(entries: [entry], policy: .after(nexUpdate))
-        completion(timeline)
+        
+        Task {
+            let nexUpdate = Date().addingTimeInterval(43200)
+            
+            do {
+                //Get Repo
+                let repoToShow = RepoURL.kursvalut
+                var repo = try await NetworkManager.shared.getRepo(atURL: repoToShow)
+                let avatarImageData = await NetworkManager.shared.downloadImageData(from: repo.owner.avatarUrl)
+                repo.avatarData = avatarImageData ?? Data()
+                
+                //Get Contributors
+                let contributors = try await NetworkManager.shared.getContributors(atURL: repoToShow + "/contributors")
+                
+                //Filter to top 4 contributors
+                var topFour = Array(contributors.prefix(4))
+                
+                //Dowload top four avatars
+                for i in topFour.indices {
+                    let avatarData = await NetworkManager.shared.downloadImageData(from: topFour[i].avatarUrl)
+                    topFour[i].avatarData = avatarData ?? Data()
+                }
+                repo.contributors = topFour
+                
+                //Create entry and timeline
+                let entry  = ContributorEntry(date: .now, repo: repo)
+                let timeline = Timeline(entries: [entry], policy: .after(nexUpdate))
+                completion(timeline)
+            } catch {
+                print("❌ Error - \(error)")
+            }
+        }
     }
 }
 
@@ -30,7 +58,7 @@ struct ContributorEntryView : View {
     var body: some View {
         VStack(spacing: 40) {
             RepoMediumView(repo: entry.repo)
-            ContributorMediumView()
+            ContributorMediumView(repo: entry.repo)
         }
     }
 }

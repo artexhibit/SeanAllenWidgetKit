@@ -10,6 +10,8 @@
 		0B20DB822B0BC0A6007D3DD8 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20DB812B0BC0A6007D3DD8 /* WidgetBundle.swift */; };
 		0B20DB842B0BC35B007D3DD8 /* ContributorWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20DB832B0BC35B007D3DD8 /* ContributorWidget.swift */; };
 		0B20DB862B0BCD1E007D3DD8 /* ContributorMediumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20DB852B0BCD1E007D3DD8 /* ContributorMediumView.swift */; };
+		0B20DB882B0BDBFA007D3DD8 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20DB872B0BDBFA007D3DD8 /* Contributor.swift */; };
+		0B20DB892B0BDBFA007D3DD8 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20DB872B0BDBFA007D3DD8 /* Contributor.swift */; };
 		0B888DA42B0A345C00672CC2 /* RepoWatcherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DA32B0A345C00672CC2 /* RepoWatcherApp.swift */; };
 		0B888DA62B0A345C00672CC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B888DA52B0A345C00672CC2 /* ContentView.swift */; };
 		0B888DA82B0A345D00672CC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B888DA72B0A345D00672CC2 /* Assets.xcassets */; };
@@ -55,6 +57,7 @@
 		0B20DB812B0BC0A6007D3DD8 /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
 		0B20DB832B0BC35B007D3DD8 /* ContributorWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorWidget.swift; sourceTree = "<group>"; };
 		0B20DB852B0BCD1E007D3DD8 /* ContributorMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorMediumView.swift; sourceTree = "<group>"; };
+		0B20DB872B0BDBFA007D3DD8 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		0B888DA02B0A345C00672CC2 /* RepoWatcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoWatcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B888DA32B0A345C00672CC2 /* RepoWatcherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoWatcherApp.swift; sourceTree = "<group>"; };
 		0B888DA52B0A345C00672CC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 				0B888DA32B0A345C00672CC2 /* RepoWatcherApp.swift */,
 				0B888DA52B0A345C00672CC2 /* ContentView.swift */,
 				0B888DCA2B0A39CB00672CC2 /* Repository.swift */,
+				0B20DB872B0BDBFA007D3DD8 /* Contributor.swift */,
 				0B888DCE2B0A42BB00672CC2 /* NetworkManager.swift */,
 				0B888DA72B0A345D00672CC2 /* Assets.xcassets */,
 				0B888DA92B0A345D00672CC2 /* Preview Content */,
@@ -258,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B888DCF2B0A42BB00672CC2 /* NetworkManager.swift in Sources */,
+				0B20DB882B0BDBFA007D3DD8 /* Contributor.swift in Sources */,
 				0B888DA62B0A345C00672CC2 /* ContentView.swift in Sources */,
 				0B888DA42B0A345C00672CC2 /* RepoWatcherApp.swift in Sources */,
 				0B888DCB2B0A39CB00672CC2 /* Repository.swift in Sources */,
@@ -269,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B20DB842B0BC35B007D3DD8 /* ContributorWidget.swift in Sources */,
+				0B20DB892B0BDBFA007D3DD8 /* Contributor.swift in Sources */,
 				0B888DD02B0A42BB00672CC2 /* NetworkManager.swift in Sources */,
 				0B888DD92B0A6DB200672CC2 /* MockData.swift in Sources */,
 				0B888DD52B0A5E9B00672CC2 /* RepoMediumView.swift in Sources */,

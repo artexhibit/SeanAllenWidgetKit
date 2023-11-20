@@ -9,7 +9,7 @@ struct MockData {
                                     openIssues: 55,
                                     pushedAt: "2023-11-18T10:38:49Z",
                                     avatarData: Data())
-    static let repoTwo = Repository(name: "Repository 1",
+    static let repoTwo = Repository(name: "Repository 2",
                                     owner: Owner(avatarUrl: ""),
                                     hasIssues: false,
                                     forks: 134,

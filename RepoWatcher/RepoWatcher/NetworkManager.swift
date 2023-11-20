@@ -54,5 +54,4 @@ enum RepoURL {
     static let kursvalut = "https://api.github.com/repos/artexhibit/Kursvalut"
     static let seanAllenWidgetKit = "https://api.github.com/repos/artexhibit/SeanAllenWidgetKit"
     static let react = "https://api.github.com/repos/facebook/react"
-    
 }

@@ -1,18 +1,15 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> DayEntry {
-        DayEntry(date: Date())
-    }
-    
-    func getSnapshot(in context: Context, completion: @escaping (DayEntry) -> ()) {
-        let entry = DayEntry(date: Date())
+struct Provider: IntentTimelineProvider {
+    func getSnapshot(for configuration: ChangeFontIntent, in context: Context, completion: @escaping (DayEntry) -> Void) {
+        let entry = DayEntry(date: Date(), showFunFont: false)
         completion(entry)
     }
     
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: ChangeFontIntent, in context: Context, completion: @escaping (Timeline<DayEntry>) -> Void) {
         var entries: [DayEntry] = []
+        let showFunFont = configuration.funFont == 1
         
         // Generate a timeline consisting of seven entries a day apart, starting from the current date.
         let currentDate = Date()
@@ -20,17 +17,22 @@ struct Provider: TimelineProvider {
         for dayOffset in 0 ..< 7 {
             let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
             let startOfDate = Calendar.current.startOfDay(for: entryDate)
-            let entry = DayEntry(date: startOfDate)
+            let entry = DayEntry(date: startOfDate, showFunFont: showFunFont)
             entries.append(entry)
         }
         
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
+    
+    func placeholder(in context: Context) -> DayEntry {
+        DayEntry(date: Date(), showFunFont: false)
+    }
 }
 
 struct DayEntry: TimelineEntry {
     let date: Date
+    let showFunFont: Bool
 }
 
 struct MonthlyWidgetEntryView : View {
@@ -39,6 +41,7 @@ struct MonthlyWidgetEntryView : View {
     @Environment(\.widgetRenderingMode) var renderingMode
     var entry: DayEntry
     var config: MonthConfig
+    let funFontName = "Chalkduster"
     
     init(entry: DayEntry) {
         self.entry = entry
@@ -49,10 +52,10 @@ struct MonthlyWidgetEntryView : View {
         VStack {
             HStack(spacing: 4) {
                 Spacer()
-                 Text(config.emojiText)
+                Text(config.emojiText)
                     .font(.title2)
                 Text(entry.date.weekdayDisplayFormat)
-                    .font(.title3)
+                    .font(entry.showFunFont ? .custom(funFontName, size: 24) : .title3)
                     .fontWeight(.bold)
                     .minimumScaleFactor(0.6)
                     .foregroundStyle(showsBackground ? config.weekDayTextColor : .white)
@@ -65,7 +68,7 @@ struct MonthlyWidgetEntryView : View {
             .animation(.bouncy, value: entry.date)
             
             Text(entry.date.dayDisplayFormat)
-                .font(.system(size: 80, weight: .heavy))
+                .font(entry.showFunFont ? .custom(funFontName, size: 80) : .system(size: 80, weight: .heavy))
                 .foregroundStyle(showsBackground ? config.dayTextColor : .white)
             //animate number change
                 .contentTransition(.numericText())
@@ -88,7 +91,8 @@ struct MonthlyWidget: Widget {
     let kind: String = "MonthlyWidget"
     
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+        
+        IntentConfiguration(kind: kind, intent: ChangeFontIntent.self, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
                 MonthlyWidgetEntryView(entry: entry)
             } else {
@@ -125,10 +129,10 @@ extension Date {
 }
 
 struct MockData {
-    static let dayOne = DayEntry(date: dateToDisplay(month: 11, day: 4))
-    static let dayTwo = DayEntry(date: dateToDisplay(month: 11, day: 5))
-    static let dayThree = DayEntry(date: dateToDisplay(month: 11, day: 6))
-    static let januaryFirst = DayEntry(date: dateToDisplay(month: 1, day: 1))
+    static let dayOne = DayEntry(date: dateToDisplay(month: 11, day: 4), showFunFont: true)
+    static let dayTwo = DayEntry(date: dateToDisplay(month: 11, day: 5), showFunFont: false)
+    static let dayThree = DayEntry(date: dateToDisplay(month: 11, day: 6), showFunFont: false)
+    static let januaryFirst = DayEntry(date: dateToDisplay(month: 1, day: 1), showFunFont: false)
     
     //helper method to test different widget styles according to dates
     static func dateToDisplay(month: Int, day: Int) -> Date {

@@ -37,7 +37,7 @@ struct ContributorProvider: TimelineProvider {
                 repo.contributors = topFour
                 
                 //Create entry and timeline
-                let entry  = ContributorEntry(date: .now, repo: repo)
+                let entry = ContributorEntry(date: .now, repo: repo)
                 let timeline = Timeline(entries: [entry], policy: .after(nexUpdate))
                 completion(timeline)
             } catch {

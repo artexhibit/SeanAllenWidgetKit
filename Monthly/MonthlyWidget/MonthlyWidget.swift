@@ -1,15 +1,20 @@
 import WidgetKit
 import SwiftUI
+import AppIntents
 
-struct Provider: IntentTimelineProvider {
-    func getSnapshot(for configuration: ChangeFontIntent, in context: Context, completion: @escaping (DayEntry) -> Void) {
-        let entry = DayEntry(date: Date(), showFunFont: false)
-        completion(entry)
+struct Provider: AppIntentTimelineProvider {
+    func placeholder(in context: Context) -> DayEntry {
+        DayEntry(date: Date(), showFunFont: false)
     }
     
-    func getTimeline(for configuration: ChangeFontIntent, in context: Context, completion: @escaping (Timeline<DayEntry>) -> Void) {
+    func snapshot(for configuration: ChangeFontIntent, in context: Context) async -> DayEntry {
+        let entry = DayEntry(date: Date(), showFunFont: false)
+        return entry
+    }
+    
+    func timeline(for configuration: ChangeFontIntent, in context: Context) async -> Timeline<DayEntry> {
         var entries: [DayEntry] = []
-        let showFunFont = configuration.funFont == 1
+        let showFunFont = configuration.funFont
         
         // Generate a timeline consisting of seven entries a day apart, starting from the current date.
         let currentDate = Date()
@@ -22,11 +27,7 @@ struct Provider: IntentTimelineProvider {
         }
         
         let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
-    }
-    
-    func placeholder(in context: Context) -> DayEntry {
-        DayEntry(date: Date(), showFunFont: false)
+        return timeline
     }
 }
 
@@ -91,8 +92,7 @@ struct MonthlyWidget: Widget {
     let kind: String = "MonthlyWidget"
     
     var body: some WidgetConfiguration {
-        
-        IntentConfiguration(kind: kind, intent: ChangeFontIntent.self, provider: Provider()) { entry in
+        AppIntentConfiguration(kind: kind, intent: ChangeFontIntent.self, provider: Provider()) { entry in
             if #available(iOS 17.0, *) {
                 MonthlyWidgetEntryView(entry: entry)
             } else {
@@ -126,6 +126,14 @@ extension Date {
     var dayDisplayFormat: String {
         self.formatted(.dateTime.day())
     }
+}
+
+struct ChangeFontIntent: AppIntent, WidgetConfigurationIntent {
+    static var title: LocalizedStringResource = "Fun Font"
+    static var description: IntentDescription? = .init(stringLiteral: "Switch to a fun font")
+    
+    @Parameter(title: "Fun Font")
+    var funFont: Bool
 }
 
 struct MockData {

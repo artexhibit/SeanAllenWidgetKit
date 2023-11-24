@@ -14,6 +14,7 @@
 		0B9B6F782B0FD598000422AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B6F772B0FD598000422AD /* Persistence.swift */; };
 		0B9B6F7B2B0FD598000422AD /* SwiftCal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B6F792B0FD598000422AD /* SwiftCal.xcdatamodeld */; };
 		0BD4C5782B1121070053D8A7 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4C5772B1121070053D8A7 /* Date+Ext.swift */; };
+		0BD4C57A2B1131980053D8A7 /* StreakView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD4C5792B1131980053D8A7 /* StreakView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		0B9B6F772B0FD598000422AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		0B9B6F7A2B0FD598000422AD /* SwiftCal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftCal.xcdatamodel; sourceTree = "<group>"; };
 		0BD4C5772B1121070053D8A7 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		0BD4C5792B1131980053D8A7 /* StreakView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreakView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				0B9B6F6E2B0FD596000422AD /* SwiftCalApp.swift */,
 				0B9B6F702B0FD596000422AD /* CalendarView.swift */,
+				0BD4C5792B1131980053D8A7 /* StreakView.swift */,
 				0BD4C5772B1121070053D8A7 /* Date+Ext.swift */,
 				0B9B6F722B0FD598000422AD /* Assets.xcassets */,
 				0B9B6F772B0FD598000422AD /* Persistence.swift */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BD4C57A2B1131980053D8A7 /* StreakView.swift in Sources */,
 				0B9B6F782B0FD598000422AD /* Persistence.swift in Sources */,
 				0B9B6F712B0FD596000422AD /* CalendarView.swift in Sources */,
 				0B9B6F7B2B0FD598000422AD /* SwiftCal.xcdatamodeld in Sources */,

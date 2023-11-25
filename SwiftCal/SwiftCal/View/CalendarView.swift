@@ -1,5 +1,6 @@
 import SwiftUI
 import CoreData
+import WidgetKit
 
 struct CalendarView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -20,7 +21,7 @@ struct CalendarView: View {
                     
                     ForEach(days) { day in
                         if day.date!.monthInt != Date().monthInt {
-                            Text (" ")
+                            Text(" ")
                         } else {
                             Text(day.date!.formatted(.dateTime.day()))
                                 .fontWeight(.bold)
@@ -36,6 +37,9 @@ struct CalendarView: View {
                                         
                                         do {
                                             try viewContext.save()
+                               
+                                            WidgetCenter.shared.reloadTimelines(ofKind: "SwiftCalWidget")
+                                            
                                             print("✌🏻 \(day.date!.dayInt) now studied")
                                         } catch {
                                             print("❗️Failed to save context")

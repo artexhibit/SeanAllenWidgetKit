@@ -2,16 +2,15 @@ import CoreData
 
 struct PersistenceController {
     static let shared = PersistenceController()
-    let databaseName = "SwiftCal.swift"
+    let databaseName = "SwiftCal.sqlite"
     
     var oldStoreURL: URL {
-        let directory = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first!
-        return directory.appending(path: databaseName, directoryHint: .inferFromPath)
+        .applicationSupportDirectory.appending(path: databaseName)
     }
     
     var sharedStoreURL: URL {
         let container = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.ru.igorcodes.SwiftCal")!
-        return container.appending(path: databaseName, directoryHint: .inferFromPath)
+        return container.appending(path: databaseName)
     }
 
     static var preview: PersistenceController = {
@@ -43,8 +42,11 @@ struct PersistenceController {
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         } else if !FileManager.default.fileExists(atPath: oldStoreURL.path) {
+            print("Old store doesnt exist, using new shared URL")
             container.persistentStoreDescriptions.first!.url = sharedStoreURL
         }
+        
+        print("Container URL equals: \(container.persistentStoreDescriptions.first!.url!)")
         
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -57,19 +59,23 @@ struct PersistenceController {
     
     func migrateStore(for container: NSPersistentContainer) {
         let coordinator = container.persistentStoreCoordinator
+        print("Went into migrateStore")
         
         guard let oldStore = coordinator.persistentStore(for: oldStoreURL) else { return }
+        print("Old store no longer exists")
         
         do {
            let _ = try coordinator.migratePersistentStore(oldStore, to: sharedStoreURL, type: .sqlite)
+            print("Migration succsessful")
         } catch {
             fatalError("Unable to migrate to shared store")
         }
         
         do {
             try FileManager.default.removeItem(at: oldStoreURL)
+            print("Old store deleted")
         } catch {
-            fatalError("Unable to delete the old store")
+            print("Unable to delete the old store")
         }
     }
 }

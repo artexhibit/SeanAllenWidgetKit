@@ -4,7 +4,7 @@ struct StreaksCalculator {
     static func calculateStreakValue(for days: [Day]) -> Int {
         guard !days.isEmpty else { return 0 }
         
-        let nonFutureDays = days.filter { $0.date!.dayInt <= Date().dayInt }
+        let nonFutureDays = days.filter { $0.date.dayInt <= Date().dayInt }
         var currentStreak = 0
         var longestStreak = 0
         

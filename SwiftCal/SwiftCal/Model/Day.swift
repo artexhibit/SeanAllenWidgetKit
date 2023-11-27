@@ -2,11 +2,12 @@ import Foundation
 import SwiftData
 
 
-@Model public class Day {
-    var date: Date?
-    var didStudy: Bool?
+@Model class Day {
+    var date: Date
+    var didStudy: Bool
     
-
-    public init() { }
-    
+    init(date: Date, didStudy: Bool) {
+        self.date = date
+        self.didStudy = didStudy
+    }
 }

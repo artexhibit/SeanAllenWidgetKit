@@ -1,13 +1,17 @@
 import SwiftUI
-import CoreData
+import SwiftData
 
 struct StreakView: View {
+    @Query(filter: #Predicate<Day> { $0.date > startDate && $0.date < endDate }, sort: \Day.date)
+    var days: [Day]
     
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Day.date, ascending: true)],
-        predicate: NSPredicate(format: "(date >= %@) AND (date <= %@)", Date().startOfMonth as CVarArg,
-            Date().endOfMonth as CVarArg))
-    private var days: FetchedResults<Day>
+    static var startDate: Date {
+        .now.startOfCalendarWithPrefixDays
+    }
+    
+    static var endDate: Date {
+        .now.endOfMonth
+    }
     
     @State private var streakValue = 0
     var body: some View {

@@ -20,6 +20,10 @@
 		0B20AC462B12504B006AFD6B /* StreaksCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20AC442B12504B006AFD6B /* StreaksCalculator.swift */; };
 		0B88F5F82B15105D002C80AC /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5F72B15105D002C80AC /* Day.swift */; };
 		0B88F5F92B15105D002C80AC /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5F72B15105D002C80AC /* Day.swift */; };
+		0B88F5FB2B151D6A002C80AC /* Persistense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5FA2B151D6A002C80AC /* Persistense.swift */; };
+		0B88F5FC2B151D6A002C80AC /* Persistense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5FA2B151D6A002C80AC /* Persistense.swift */; };
+		0B88F5FE2B151EA5002C80AC /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5FD2B151EA5002C80AC /* AppIntents.swift */; };
+		0B88F5FF2B151EA5002C80AC /* AppIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B88F5FD2B151EA5002C80AC /* AppIntents.swift */; };
 		0B9B6F6F2B0FD596000422AD /* SwiftCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B6F6E2B0FD596000422AD /* SwiftCalApp.swift */; };
 		0B9B6F712B0FD596000422AD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9B6F702B0FD596000422AD /* CalendarView.swift */; };
 		0B9B6F732B0FD598000422AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B9B6F722B0FD598000422AD /* Assets.xcassets */; };
@@ -65,6 +69,8 @@
 		0B20AC3E2B124520006AFD6B /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		0B20AC442B12504B006AFD6B /* StreaksCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksCalculator.swift; sourceTree = "<group>"; };
 		0B88F5F72B15105D002C80AC /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		0B88F5FA2B151D6A002C80AC /* Persistense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistense.swift; sourceTree = "<group>"; };
+		0B88F5FD2B151EA5002C80AC /* AppIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntents.swift; sourceTree = "<group>"; };
 		0B9B6F6B2B0FD596000422AD /* SwiftCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9B6F6E2B0FD596000422AD /* SwiftCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCalApp.swift; sourceTree = "<group>"; };
 		0B9B6F702B0FD596000422AD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			children = (
 				0B20AC442B12504B006AFD6B /* StreaksCalculator.swift */,
 				0B88F5F72B15105D002C80AC /* Day.swift */,
+				0B88F5FA2B151D6A002C80AC /* Persistense.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 				0BD4C5772B1121070053D8A7 /* Date+Ext.swift */,
 				0B9B6F722B0FD598000422AD /* Assets.xcassets */,
 				0B9B6F742B0FD598000422AD /* Preview Content */,
+				0B88F5FD2B151EA5002C80AC /* AppIntents.swift */,
 			);
 			path = SwiftCal;
 			sourceTree = "<group>";
@@ -285,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B20AC312B123BA2006AFD6B /* SwiftCalWidget.swift in Sources */,
+				0B88F5FF2B151EA5002C80AC /* AppIntents.swift in Sources */,
+				0B88F5FC2B151D6A002C80AC /* Persistense.swift in Sources */,
 				0B20AC402B124520006AFD6B /* CalendarHeaderView.swift in Sources */,
 				0B88F5F92B15105D002C80AC /* Day.swift in Sources */,
 				0B20AC462B12504B006AFD6B /* StreaksCalculator.swift in Sources */,
@@ -298,9 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0BD4C57A2B1131980053D8A7 /* StreakView.swift in Sources */,
+				0B88F5FB2B151D6A002C80AC /* Persistense.swift in Sources */,
 				0B20AC452B12504B006AFD6B /* StreaksCalculator.swift in Sources */,
 				0B20AC3F2B124520006AFD6B /* CalendarHeaderView.swift in Sources */,
 				0B9B6F712B0FD596000422AD /* CalendarView.swift in Sources */,
+				0B88F5FE2B151EA5002C80AC /* AppIntents.swift in Sources */,
 				0B88F5F82B15105D002C80AC /* Day.swift in Sources */,
 				0B9B6F6F2B0FD596000422AD /* SwiftCalApp.swift in Sources */,
 				0BD4C5782B1121070053D8A7 /* Date+Ext.swift in Sources */,

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B9339D12B1A5CE90050D4F1 /* GameAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */; };
+		0B9339D22B1A5CE90050D4F1 /* GameAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */; };
 		0BCBDE7A2B190A9B00AE4D6A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCBDE792B190A9B00AE4D6A /* WidgetKit.framework */; };
 		0BCBDE7C2B190A9B00AE4D6A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BCBDE7B2B190A9B00AE4D6A /* SwiftUI.framework */; };
 		0BCBDE7F2B190A9B00AE4D6A /* GameWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCBDE7E2B190A9B00AE4D6A /* GameWidgetBundle.swift */; };
@@ -55,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAttributes.swift; sourceTree = "<group>"; };
 		0BCBDE772B190A9B00AE4D6A /* GameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCBDE792B190A9B00AE4D6A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0BCBDE7B2B190A9B00AE4D6A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -173,6 +176,7 @@
 			children = (
 				ED67D63D2917E43B0097D139 /* GameModel.swift */,
 				ED67D63B2917E4210097D139 /* GameSimulator.swift */,
+				0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */,
 				ED67D6392917E4110097D139 /* GameState.swift */,
 				ED67D6372917E3FF0097D139 /* Team.swift */,
 			);
@@ -283,6 +287,7 @@
 			files = (
 				0BCBDE832B190A9B00AE4D6A /* GameWidget.swift in Sources */,
 				0BCBDE8E2B190DE800AE4D6A /* GameState.swift in Sources */,
+				0B9339D22B1A5CE90050D4F1 /* GameAttributes.swift in Sources */,
 				0BCBDE902B1911A000AE4D6A /* LiveActivityView.swift in Sources */,
 				0BCBDE812B190A9B00AE4D6A /* GameLiveActivity.swift in Sources */,
 				0BCBDE7F2B190A9B00AE4D6A /* GameWidgetBundle.swift in Sources */,
@@ -294,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B9339D12B1A5CE90050D4F1 /* GameAttributes.swift in Sources */,
 				ED67D6302917E37C0097D139 /* GameView.swift in Sources */,
 				ED67D6362917E3E40097D139 /* Image+Ext.swift in Sources */,
 				ED67D6322917E39D0097D139 /* ButtonStyles.swift in Sources */,
@@ -508,6 +514,7 @@
 				DEVELOPMENT_TEAM = Y43668Q2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +548,7 @@
 				DEVELOPMENT_TEAM = Y43668Q2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

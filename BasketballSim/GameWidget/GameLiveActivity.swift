@@ -20,6 +20,7 @@ struct GameLiveActivity: Widget {
                         Text("\(context.state.gameState.homeScore)")
                             .font(.title)
                             .fontWeight(.semibold)
+                            .contentTransition(.numericText())
                     }
                 }
                 DynamicIslandExpandedRegion(.trailing) {
@@ -27,6 +28,7 @@ struct GameLiveActivity: Widget {
                         Text("\(context.state.gameState.awayScore)")
                             .font(.title)
                             .fontWeight(.semibold)
+                            .contentTransition(.numericText())
                         
                         Image(context.attributes.awayTeam)
                             .teamLogoModifier(frame: 40)
@@ -50,11 +52,13 @@ struct GameLiveActivity: Widget {
                     
                     Text("\(context.state.gameState.homeScore)")
                         .fontWeight(.semibold)
+                        .contentTransition(.numericText())
                 }
             } compactTrailing: {
                 HStack {
                     Text("\(context.state.gameState.awayScore)")
                         .fontWeight(.semibold)
+                        .contentTransition(.numericText())
                     
                     Image(context.attributes.awayTeam)
                         .teamLogoModifier()

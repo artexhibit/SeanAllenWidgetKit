@@ -58,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAttributes.swift; sourceTree = "<group>"; };
+		0B9339D32B1A6D980050D4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0BCBDE772B190A9B00AE4D6A /* GameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BCBDE792B190A9B00AE4D6A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0BCBDE7B2B190A9B00AE4D6A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -144,6 +145,7 @@
 		ED67D6202917E3510097D139 /* BasketballSim */ = {
 			isa = PBXGroup;
 			children = (
+				0B9339D32B1A6D980050D4F1 /* Info.plist */,
 				ED67D6212917E3510097D139 /* BasketballSimApp.swift */,
 				ED67D62F2917E37C0097D139 /* GameView.swift */,
 				ED67D6342917E3C20097D139 /* Model */,
@@ -514,6 +516,7 @@
 				DEVELOPMENT_TEAM = Y43668Q2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasketballSim/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -548,6 +551,7 @@
 				DEVELOPMENT_TEAM = Y43668Q2S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BasketballSim/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

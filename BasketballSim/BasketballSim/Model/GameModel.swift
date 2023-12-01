@@ -18,9 +18,10 @@ final class GameModel: ObservableObject, GameSimulatorDelegate {
     func startLiveActivity() {
         let attributes = GameAttributes(homeTeam: "warriors", awayTeam: "bulls")
         let currentGameState = GameAttributes.ContentState(gameState: gameState)
+        let activityContent = ActivityContent(state: currentGameState, staleDate: nil)
         
         do {
-            liveActivity = try Activity.request(attributes: attributes, contentState: currentGameState)
+            liveActivity = try Activity.request(attributes: attributes, content: activityContent)
         } catch {
             print(error)
         }
@@ -28,15 +29,20 @@ final class GameModel: ObservableObject, GameSimulatorDelegate {
 
     func didUpdate(gameState: GameState) {
         self.gameState = gameState
+        let currentGameState = GameAttributes.ContentState(gameState: gameState)
+        let activityContent = ActivityContent(state: currentGameState, staleDate: nil)
         
         Task {
-            await liveActivity?.update(using: .init(gameState: gameState))
+            await liveActivity?.update(activityContent)
         }
     }
 
     func didCompleteGame() {
+        let finalGameState = GameAttributes.ContentState(gameState: simulator.endGame())
+        let activityContent = ActivityContent(state: finalGameState, staleDate: nil)
+        
         Task {
-            await liveActivity?.end(using: .init(gameState: simulator.endGame()), dismissalPolicy: .default)
+            await liveActivity?.end(activityContent, dismissalPolicy: .default)
         }
     }
 }

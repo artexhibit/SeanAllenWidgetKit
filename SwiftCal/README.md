@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/cal.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/cal.png">
 
-[🇷🇺 Russian Version](./Resources/README-CALRUS.md)
+[🇷🇺 Russian Version](../Resources/README-CALRUS.md)
 
 ## About
 

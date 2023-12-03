@@ -1,4 +1,4 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.png">
 
 [🇷🇺 Russian Version](./Resources/README-RUS.md)
 

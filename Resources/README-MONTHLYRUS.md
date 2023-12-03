@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/monthly.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/monthly.png">
 
-[🇬🇧 English Version](./Monthly/README.md)
+[🇬🇧 English Version](../Monthly/README.md)
 
 ## О проекте
 

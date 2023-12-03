@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.png">
 
-[🇬🇧 English Version](./README.md)
+[🇬🇧 English Version](../README.md)
 
 ## О репозитории
 

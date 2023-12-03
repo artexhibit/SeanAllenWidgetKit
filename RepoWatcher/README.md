@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/repo.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/repo.png">
 
-[🇷🇺 Russian Version](./Resources/README-REPORUS.md)
+[🇷🇺 Russian Version](../Resources/README-REPORUS.md)
 
 ## About
 

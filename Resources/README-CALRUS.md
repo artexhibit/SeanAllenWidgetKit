@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/cal.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/cal.png">
 
-[🇬🇧 English Version](./SwiftCal/README.md)
+[🇬🇧 English Version](../SwiftCal/README.md)
 
 ## Описание
 

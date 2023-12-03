@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/bask.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/bask.png">
 
-[🇬🇧 English Version](./BasketballSim/README.md)
+[🇬🇧 English Version](../BasketballSim/README.md)
 
 ## О проекте
 

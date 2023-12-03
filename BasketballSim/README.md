@@ -1,6 +1,6 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/bask.jpg">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/bask.png">
 
-[🇷🇺 Russian Version](./Resources/README-BASKRUS.md)
+[🇷🇺 Russian Version](../Resources/README-BASKRUS.md)
 
 ## About
 

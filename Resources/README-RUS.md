@@ -1,4 +1,4 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/Public/main/Resources/widgets.png">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.jpg">
 
 [🇬🇧 English Version](./README.md)
 
@@ -15,3 +15,6 @@
 -   делать `Cетевые Запросы` из виджетов;
 -   использовать `CoreData` в виджетах;
 -   использовать `UserDefaults` и `AppGroup` в виджетах.
+-   cоздавать виджеты для `экрана блокировки`;
+-   Создавать виджеты для `режима ожидания`;
+-   создавать и обновлять `LiveActivities`.

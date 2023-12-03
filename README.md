@@ -1,4 +1,4 @@
-<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/Public/main/Resources/widgets.png">
+<img width="1000" src="https://raw.githubusercontent.com/artexhibit/SeanAllenWidgetKit/main/Resources/widgets.jpg">
 
 [🇷🇺 Russian Version](./Resources/README-RUS.md)
 
@@ -15,3 +15,6 @@ Here I learned how to:
 -   make `Network Requests` inside Widgets;
 -   use `CoreData` inside Widgets;
 -   use `UserDefaults` and `AppGroup` inside Widgets;
+-   create `Lock Screen` widgets;
+-   create `StandBy` mode widgets;
+-   create and update `LiveActivities`.

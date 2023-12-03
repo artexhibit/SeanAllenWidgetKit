@@ -61,6 +61,7 @@
 		0B6A7BB12B0918CC00D014C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B6A7BB92B09270900D014C3 /* MonthConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthConfig.swift; sourceTree = "<group>"; };
 		0B6A7BBB2B09293000D014C3 /* Colors+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Ext.swift"; sourceTree = "<group>"; };
+		0B8FC2AD2B1CC8810070B4C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +87,7 @@
 		0B6A7B862B0918B600D014C3 = {
 			isa = PBXGroup;
 			children = (
+				0B8FC2AD2B1CC8810070B4C8 /* README.md */,
 				0B6A7B912B0918B600D014C3 /* Monthly */,
 				0B6A7BAA2B0918CB00D014C3 /* MonthlyWidget */,
 				0B6A7BA52B0918CB00D014C3 /* Frameworks */,

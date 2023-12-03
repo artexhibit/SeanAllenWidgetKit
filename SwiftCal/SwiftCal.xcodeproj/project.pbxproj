@@ -66,6 +66,7 @@
 		0B20AC3D2B123C1E006AFD6B /* SwiftCalWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftCalWidgetExtension.entitlements; sourceTree = "<group>"; };
 		0B20AC3E2B124520006AFD6B /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		0B20AC442B12504B006AFD6B /* StreaksCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksCalculator.swift; sourceTree = "<group>"; };
+		0B8FC2AF2B1CD5270070B4C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B9B6F6B2B0FD596000422AD /* SwiftCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B9B6F6E2B0FD596000422AD /* SwiftCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftCalApp.swift; sourceTree = "<group>"; };
 		0B9B6F702B0FD596000422AD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		0B9B6F622B0FD596000422AD = {
 			isa = PBXGroup;
 			children = (
+				0B8FC2AF2B1CD5270070B4C8 /* README.md */,
 				0B20AC3D2B123C1E006AFD6B /* SwiftCalWidgetExtension.entitlements */,
 				0B9B6F6D2B0FD596000422AD /* SwiftCal */,
 				0B20AC2D2B123BA2006AFD6B /* SwiftCalWidget */,

@@ -57,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B8FC2B02B1CDDA30070B4C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B9339D02B1A5CE90050D4F1 /* GameAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAttributes.swift; sourceTree = "<group>"; };
 		0B9339D32B1A6D980050D4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0BCBDE772B190A9B00AE4D6A /* GameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +127,7 @@
 		ED67D6152917E3510097D139 = {
 			isa = PBXGroup;
 			children = (
+				0B8FC2B02B1CDDA30070B4C8 /* README.md */,
 				ED67D6202917E3510097D139 /* BasketballSim */,
 				0BCBDE7D2B190A9B00AE4D6A /* GameWidget */,
 				0BCBDE782B190A9B00AE4D6A /* Frameworks */,

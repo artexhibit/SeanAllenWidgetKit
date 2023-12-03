@@ -73,6 +73,7 @@
 		0B888DCE2B0A42BB00672CC2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0B888DD42B0A5E9B00672CC2 /* RepoMediumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoMediumView.swift; sourceTree = "<group>"; };
 		0B888DD82B0A6DB200672CC2 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		0B8FC2AE2B1CCE720070B4C8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B9B6F5E2B0FCBE1000422AD /* SelectSingleRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSingleRepo.swift; sourceTree = "<group>"; };
 		0B9CD2422B0E71D800B89D83 /* RepoWatcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RepoWatcher.entitlements; sourceTree = "<group>"; };
 		0B9CD2432B0E728200B89D83 /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		0B888D972B0A345C00672CC2 = {
 			isa = PBXGroup;
 			children = (
+				0B8FC2AE2B1CCE720070B4C8 /* README.md */,
 				0B888DA22B0A345C00672CC2 /* RepoWatcher */,
 				0B888DBB2B0A348C00672CC2 /* RepoWatcherWidget */,
 				0B888DB62B0A348C00672CC2 /* Frameworks */,
